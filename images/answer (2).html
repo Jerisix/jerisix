@@ -1,0 +1,289 @@
+
+			<div class=""><p><img alt="BiteME is a sandwich shop which provides variety of sandwiches. The table below shows the types of sandwiches and process ava" src="https://media.cheggcdn.com/media/437/437406ad-b033-4232-8140-84a21d3cc30b/phpL3HgUr" style="" aria-describedby="cpk"></p>
+<p><img alt="The program will be repeated to add other customers. At the end of the process, the following report will be printed to calcu" src="https://media.cheggcdn.com/media/a95/a95938de-3dc5-4969-99ec-b590c1e215e1/phpltN3tW" style="" aria-describedby="cpl"></p>
+<div id="cpk" class="hidden">BiteME is a sandwich shop which provides variety of sandwiches. The table below shows the types of sandwiches and process available at BiteME. Sandwiches Code Price (RM) Additional cheese (RM) 1.50 each Meatball Chicken slice Pepperoni Tuna M с P T 8.00 7.50 7.00 6.50 Develop a C++ program using functions based on the following steps: Function calPrice) receives the sandwich code and quantity as parameters. This function will return the price for each sandwich and calculate and return the total price. Function addItem() receives the total price as parameter and will ask the user whether he/she requires additional cheese in his/her sandwich. Then, the function will return the new price with an additional 6% government tax. Function main() will prompt for the sandwich code and quantity from the user. Then, it will call function calPrice() to get the price. Function addItem() will calculate the new price after adding cheese and government tax Print the following receipt for each customer: ******* **** ******** BiteME : 2 Sandwich : Tuna Quantity Total Price - RM13.00 Add Cheese : Y New Price + Gov tax : RM16.96 Thank you and please come again. ****** * * * * * </div><div id="cpl" class="hidden">The program will be repeated to add other customers. At the end of the process, the following report will be printed to calculate the total sales of the day. ******** *********************** BiteME SALES REPORT Meatball (RM) -XXXXXXXX Chicken Slice (RM) -XXXXXXXX Pepperoni (RM) -XXXXXXXX Tuna (RM) XXXXXXXX Total Sales (RM) -XXXXXXXX Thank you and please come again. **** </div></div>
+			<span class="transcribed-text">Show transcribed image text</span> <span class="transcribed-image-text hidden">BiteME is a sandwich shop which provides variety of sandwiches. The table below shows the types of sandwiches and process available at BiteME. Sandwiches Code Price (RM) Additional cheese (RM) 1.50 each Meatball Chicken slice Pepperoni Tuna M с P T 8.00 7.50 7.00 6.50 Develop a C++ program using functions based on the following steps: Function calPrice) receives the sandwich code and quantity as parameters. This function will return the price for each sandwich and calculate and return the total price. Function addItem() receives the total price as parameter and will ask the user whether he/she requires additional cheese in his/her sandwich. Then, the function will return the new price with an additional 6% government tax. Function main() will prompt for the sandwich code and quantity from the user. Then, it will call function calPrice() to get the price. Function addItem() will calculate the new price after adding cheese and government tax Print the following receipt for each customer: ******* **** ******** BiteME : 2 Sandwich : Tuna Quantity Total Price - RM13.00 Add Cheese : Y New Price + Gov tax : RM16.96 Thank you and please come again. ****** * * * * * <br>
+The program will be repeated to add other customers. At the end of the process, the following report will be printed to calculate the total sales of the day. ******** *********************** BiteME SALES REPORT Meatball (RM) -XXXXXXXX Chicken Slice (RM) -XXXXXXXX Pepperoni (RM) -XXXXXXXX Tuna (RM) XXXXXXXX Total Sales (RM) -XXXXXXXX Thank you and please come again. **** </span>
+			
+		
+
+                <div class="answer-given-body ugc-base">
+                    <p><em>// The code for the above problem is given below with
+screenshots for output</em></p>
+<p><em>// and if you feel any problem then feel free to
+ask.</em></p>
+<p><span style="color:#859900;">#include</span><span style="color:#2aa198;">&lt;iostream&gt;</span></p>
+<p><span style="color:#859900;">#include</span><span style="color:#2aa198;">&lt;ctype.h&gt;</span></p>
+<p><span style="color:#859900;">#include</span><span style="color:#2aa198;">&lt;iomanip&gt;</span></p>
+<p><span style="color:#859900;">using</span>
+<strong>namespace</strong> <span style="color:#cb4b16;">std</span><span style="color:#bbbbbb;">;</span></p>
+<p><em>// calPrice function for calculating and returning the total
+price of a sandwich</em></p>
+<p><strong>float</strong> <span style="color:#268bd2;">calPrice</span><span style="color:#bbbbbb;">(</span><strong>char</strong> <span style="color:#bbbbbb;">code,</span> <strong>int</strong> <span style="color:#bbbbbb;">quantity)</span></p>
+<p><span style="color:#bbbbbb;">{</span></p>
+<p><strong>float</strong> <span style="color:#bbbbbb;">price;</span></p>
+<p><em>// assigning the price according to the sandwich
+code</em></p>
+<p><span style="color:#859900;">switch</span> <span style="color:#bbbbbb;">(code)</span></p>
+<p><span style="color:#bbbbbb;">{</span></p>
+<p><span style="color:#859900;">case</span> <span style="color:#2aa198;">'M'</span><span style="color:#bbbbbb;">:</span></p>
+<p><span style="color:#bbbbbb;">{</span></p>
+<p><span style="color:#bbbbbb;">price</span> <span style="color:#859900;">=</span> <span style="color:#d33682;">8.00</span><span style="color:#bbbbbb;">;</span></p>
+<p><span style="color:#859900;">break</span><span style="color:#bbbbbb;">;</span></p>
+<p><span style="color:#bbbbbb;">}</span></p>
+<p><span style="color:#859900;">case</span> <span style="color:#2aa198;">'C'</span><span style="color:#bbbbbb;">:</span></p>
+<p><span style="color:#bbbbbb;">{</span></p>
+<p><span style="color:#bbbbbb;">price</span> <span style="color:#859900;">=</span> <span style="color:#d33682;">7.50</span><span style="color:#bbbbbb;">;</span></p>
+<p><span style="color:#859900;">break</span><span style="color:#bbbbbb;">;</span></p>
+<p><span style="color:#bbbbbb;">}</span></p>
+<p><span style="color:#859900;">case</span> <span style="color:#2aa198;">'P'</span><span style="color:#bbbbbb;">:</span></p>
+<p><span style="color:#bbbbbb;">{</span></p>
+<p><span style="color:#bbbbbb;">price</span> <span style="color:#859900;">=</span> <span style="color:#d33682;">7.00</span><span style="color:#bbbbbb;">;</span></p>
+<p><span style="color:#859900;">break</span><span style="color:#bbbbbb;">;</span></p>
+<p><span style="color:#bbbbbb;">}</span></p>
+<p><span style="color:#859900;">case</span> <span style="color:#2aa198;">'T'</span><span style="color:#bbbbbb;">:</span></p>
+<p><span style="color:#bbbbbb;">{</span></p>
+<p><span style="color:#bbbbbb;">price</span> <span style="color:#859900;">=</span> <span style="color:#d33682;">6.50</span><span style="color:#bbbbbb;">;</span></p>
+<p><span style="color:#859900;">break</span><span style="color:#bbbbbb;">;</span></p>
+<p><span style="color:#bbbbbb;">}</span></p>
+<p><span style="color:#859900;">default</span><span style="color:#bbbbbb;">:</span></p>
+<p><span style="color:#bbbbbb;">{</span></p>
+<p><span style="color:#859900;">return</span> <span style="color:#d33682;">0</span><span style="color:#bbbbbb;">;</span></p>
+<p><span style="color:#859900;">break</span><span style="color:#bbbbbb;">;</span></p>
+<p><span style="color:#bbbbbb;">}</span></p>
+<p><span style="color:#bbbbbb;">}</span></p>
+<p><em>// returning the total price by multiplying the price of a
+sandwich</em></p>
+<p><em>// with the quantity entered by user</em></p>
+<p><span style="color:#859900;">return</span> <span style="color:#bbbbbb;">price</span><span style="color:#859900;">*</span><span style="color:#bbbbbb;">quantity;</span></p>
+<p><span style="color:#bbbbbb;">}</span></p>
+<p><em>// addItem function to add tax and addition cheese to the
+sandwiches</em></p>
+<p><strong>float</strong> <span style="color:#268bd2;">addItem</span><span style="color:#bbbbbb;">(</span><strong>float</strong> <span style="color:#bbbbbb;">price,</span> <strong>int</strong> <span style="color:#bbbbbb;">quantity)</span></p>
+<p><span style="color:#bbbbbb;">{</span></p>
+<p><strong>char</strong> <span style="color:#bbbbbb;">addCheese;</span></p>
+<p><em>// asking the user for addition cheese</em></p>
+<p><span style="color:#bbbbbb;">cout</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#2aa198;">"Do
+you want additional cheese [Y/N]: "</span><span style="color:#bbbbbb;">;</span></p>
+<p><span style="color:#bbbbbb;">cin</span><span style="color:#859900;">&gt;&gt;</span><span style="color:#bbbbbb;">addCheese;</span></p>
+<p><span style="color:#859900;">if</span><span style="color:#bbbbbb;">(addCheese</span> <span style="color:#859900;">==</span> <span style="color:#2aa198;">'Y'</span>
+<span style="color:#859900;">||</span> <span style="color:#bbbbbb;">addCheese</span> <span style="color:#859900;">==</span> <span style="color:#2aa198;">'y'</span><span style="color:#bbbbbb;">)</span></p>
+<p><span style="color:#bbbbbb;">{</span></p>
+<p><span style="color:#bbbbbb;">price</span><span style="color:#859900;">+=</span> <span style="color:#bbbbbb;">quantity</span><span style="color:#859900;">*</span><span style="color:#d33682;">1.50</span><span style="color:#bbbbbb;">;</span></p>
+<p><span style="color:#bbbbbb;">}</span></p>
+<p><strong>float</strong> <span style="color:#bbbbbb;">tax</span>
+<span style="color:#859900;">=</span> <span style="color:#bbbbbb;">price</span><span style="color:#859900;">*</span><span style="color:#d33682;">0.06</span><span style="color:#bbbbbb;">;</span></p>
+<p><em>// returning total amount after adding tax and charges of
+additional cheese</em></p>
+<p><span style="color:#859900;">return</span> <span style="color:#bbbbbb;">(price</span> <span style="color:#859900;">+</span> <span style="color:#bbbbbb;">tax);</span></p>
+<p><span style="color:#bbbbbb;">}</span></p>
+<p><em>// customerReceipt function to print the receipt of a
+customer</em></p>
+<p><strong>void</strong> <span style="color:#268bd2;">customerReceipt</span><span style="color:#bbbbbb;">(</span><span style="color:#cb4b16;">string</span>
+<span style="color:#bbbbbb;">sandwich,</span> <strong>int</strong>
+<span style="color:#bbbbbb;">quantity,</span>
+<strong>float</strong> <span style="color:#bbbbbb;">price,</span>
+<strong>char</strong> <span style="color:#bbbbbb;">addCheese,</span> <strong>float</strong>
+<span style="color:#bbbbbb;">totalPrice)</span></p>
+<p><span style="color:#bbbbbb;">{</span></p>
+<p><em>// printing the receipt in the given format by using setw
+function and for loops</em></p>
+<p><span style="color:#859900;">for</span><span style="color:#bbbbbb;">(</span><strong>int</strong> <span style="color:#bbbbbb;">i</span> <span style="color:#859900;">=</span>
+<span style="color:#d33682;">0</span><span style="color:#bbbbbb;">;
+i</span> <span style="color:#859900;">&lt;</span> <span style="color:#d33682;">56</span><span style="color:#bbbbbb;">;
+i</span><span style="color:#859900;">++</span><span style="color:#bbbbbb;">)</span></p>
+<p><span style="color:#bbbbbb;">{</span></p>
+<p><span style="color:#bbbbbb;">cout</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#2aa198;">"*"</span><span style="color:#bbbbbb;">;</span></p>
+<p><span style="color:#bbbbbb;">}</span></p>
+<p><span style="color:#bbbbbb;">cout</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#bbbbbb;">endl</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#2aa198;">"
+BiteME</span><span style="color:#cb4b16;">\n\n</span><span style="color:#2aa198;">"</span><span style="color:#bbbbbb;">;</span></p>
+<p><span style="color:#bbbbbb;">cout</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#bbbbbb;">left</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#268bd2;">setw</span><span style="color:#bbbbbb;">(</span><span style="color:#d33682;">22</span><span style="color:#bbbbbb;">)</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#2aa198;">"Sandwich"</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#2aa198;">":
+"</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#bbbbbb;">left</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#bbbbbb;">sandwich</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#bbbbbb;">endl;</span></p>
+<p><span style="color:#bbbbbb;">cout</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#268bd2;">setw</span><span style="color:#bbbbbb;">(</span><span style="color:#d33682;">22</span><span style="color:#bbbbbb;">)</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#2aa198;">"Quantity"</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#2aa198;">":
+"</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#bbbbbb;">left</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#bbbbbb;">quantity</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#bbbbbb;">endl;</span></p>
+<p><span style="color:#bbbbbb;">cout</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#268bd2;">setw</span><span style="color:#bbbbbb;">(</span><span style="color:#d33682;">22</span><span style="color:#bbbbbb;">)</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#2aa198;">"Total
+Price"</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#2aa198;">":
+"</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#bbbbbb;">left</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#2aa198;">"RM
+"</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#bbbbbb;">price</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#bbbbbb;">endl;</span></p>
+<p><span style="color:#bbbbbb;">cout</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#268bd2;">setw</span><span style="color:#bbbbbb;">(</span><span style="color:#d33682;">22</span><span style="color:#bbbbbb;">)</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#2aa198;">"Add
+Cheese"</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#2aa198;">":
+"</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#bbbbbb;">left</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#bbbbbb;">addCheese</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#bbbbbb;">endl;</span></p>
+<p><span style="color:#bbbbbb;">cout</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#268bd2;">setw</span><span style="color:#bbbbbb;">(</span><span style="color:#d33682;">22</span><span style="color:#bbbbbb;">)</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#2aa198;">"New
+Price + Gov tax"</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#2aa198;">": RM
+"</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#bbbbbb;">totalPrice</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#bbbbbb;">endl;</span></p>
+<p><span style="color:#bbbbbb;">cout</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#2aa198;">"Thank
+you and please come again.</span><span style="color:#cb4b16;">\n</span><span style="color:#2aa198;">"</span><span style="color:#bbbbbb;">;</span></p>
+<p><span style="color:#859900;">for</span><span style="color:#bbbbbb;">(</span><strong>int</strong> <span style="color:#bbbbbb;">i</span> <span style="color:#859900;">=</span>
+<span style="color:#d33682;">0</span><span style="color:#bbbbbb;">;
+i</span> <span style="color:#859900;">&lt;</span> <span style="color:#d33682;">56</span><span style="color:#bbbbbb;">;
+i</span><span style="color:#859900;">++</span><span style="color:#bbbbbb;">)</span></p>
+<p><span style="color:#bbbbbb;">{</span></p>
+<p><span style="color:#bbbbbb;">cout</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#2aa198;">"*"</span><span style="color:#bbbbbb;">;</span></p>
+<p><span style="color:#bbbbbb;">}</span></p>
+<p><span style="color:#bbbbbb;">cout</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#bbbbbb;">endl;</span></p>
+<p><span style="color:#bbbbbb;">}</span></p>
+<p><em>// salesReport function to print the sales report at the end
+of the process in the required format</em></p>
+<p><strong>void</strong> <span style="color:#268bd2;">salesReport</span><span style="color:#bbbbbb;">(</span><strong>float</strong> <span style="color:#bbbbbb;">meatballSales,</span> <strong>float</strong>
+<span style="color:#bbbbbb;">chickenSliceSales,</span>
+<strong>float</strong> <span style="color:#bbbbbb;">pepSales,</span> <strong>float</strong>
+<span style="color:#bbbbbb;">tunaSales)</span></p>
+<p><span style="color:#bbbbbb;">{</span></p>
+<p><strong>float</strong> <span style="color:#bbbbbb;">totalSales</span> <span style="color:#859900;">=</span> <span style="color:#bbbbbb;">meatballSales</span><span style="color:#859900;">+</span><span style="color:#bbbbbb;">chickenSliceSales</span><span style="color:#859900;">+</span><span style="color:#bbbbbb;">tunaSales</span><span style="color:#859900;">+</span><span style="color:#bbbbbb;">pepSales;</span></p>
+<p><span style="color:#859900;">for</span><span style="color:#bbbbbb;">(</span><strong>int</strong> <span style="color:#bbbbbb;">i</span> <span style="color:#859900;">=</span>
+<span style="color:#d33682;">0</span><span style="color:#bbbbbb;">;
+i</span> <span style="color:#859900;">&lt;</span> <span style="color:#d33682;">56</span><span style="color:#bbbbbb;">;
+i</span><span style="color:#859900;">++</span><span style="color:#bbbbbb;">)</span></p>
+<p><span style="color:#bbbbbb;">{</span></p>
+<p><span style="color:#bbbbbb;">cout</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#2aa198;">"*"</span><span style="color:#bbbbbb;">;</span></p>
+<p><span style="color:#bbbbbb;">}</span></p>
+<p><span style="color:#bbbbbb;">cout</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#bbbbbb;">endl</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#2aa198;">"
+BiteME SALES REPORT</span><span style="color:#cb4b16;">\n\n</span><span style="color:#2aa198;">"</span><span style="color:#bbbbbb;">;</span></p>
+<p><span style="color:#bbbbbb;">cout</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#bbbbbb;">left</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#268bd2;">setw</span><span style="color:#bbbbbb;">(</span><span style="color:#d33682;">22</span><span style="color:#bbbbbb;">)</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#2aa198;">"Meatball (RM)"</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#2aa198;">":
+"</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#bbbbbb;">meatballSales</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#bbbbbb;">endl;</span></p>
+<p><span style="color:#bbbbbb;">cout</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#bbbbbb;">left</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#268bd2;">setw</span><span style="color:#bbbbbb;">(</span><span style="color:#d33682;">22</span><span style="color:#bbbbbb;">)</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#2aa198;">"Chicken Slice (RM)"</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#2aa198;">":
+"</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#bbbbbb;">chickenSliceSales</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#bbbbbb;">endl;</span></p>
+<p><span style="color:#bbbbbb;">cout</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#bbbbbb;">left</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#268bd2;">setw</span><span style="color:#bbbbbb;">(</span><span style="color:#d33682;">22</span><span style="color:#bbbbbb;">)</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#2aa198;">"Pepperoni (RM)"</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#2aa198;">":
+"</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#bbbbbb;">pepSales</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#bbbbbb;">endl;</span></p>
+<p><span style="color:#bbbbbb;">cout</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#bbbbbb;">left</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#268bd2;">setw</span><span style="color:#bbbbbb;">(</span><span style="color:#d33682;">22</span><span style="color:#bbbbbb;">)</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#2aa198;">"TUna
+(RM)"</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#2aa198;">":
+"</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#bbbbbb;">tunaSales</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#bbbbbb;">endl;</span></p>
+<p><span style="color:#bbbbbb;">cout</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#bbbbbb;">left</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#268bd2;">setw</span><span style="color:#bbbbbb;">(</span><span style="color:#d33682;">22</span><span style="color:#bbbbbb;">)</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#2aa198;">"Total
+Sales (RM)"</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#2aa198;">":
+"</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#bbbbbb;">totalSales</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#bbbbbb;">endl;</span></p>
+<p><span style="color:#bbbbbb;">cout</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#2aa198;">"Thank
+you and please come again.</span><span style="color:#cb4b16;">\n</span><span style="color:#2aa198;">"</span><span style="color:#bbbbbb;">;</span></p>
+<p><span style="color:#859900;">for</span><span style="color:#bbbbbb;">(</span><strong>int</strong> <span style="color:#bbbbbb;">i</span> <span style="color:#859900;">=</span>
+<span style="color:#d33682;">0</span><span style="color:#bbbbbb;">;
+i</span> <span style="color:#859900;">&lt;</span> <span style="color:#d33682;">56</span><span style="color:#bbbbbb;">;
+i</span><span style="color:#859900;">++</span><span style="color:#bbbbbb;">)</span></p>
+<p><span style="color:#bbbbbb;">{</span></p>
+<p><span style="color:#bbbbbb;">cout</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#2aa198;">"*"</span><span style="color:#bbbbbb;">;</span></p>
+<p><span style="color:#bbbbbb;">}</span></p>
+<p><span style="color:#bbbbbb;">cout</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#bbbbbb;">endl;</span></p>
+<p><span style="color:#bbbbbb;">}</span></p>
+<p><strong>int</strong> <span style="color:#268bd2;">main</span><span style="color:#bbbbbb;">()</span></p>
+<p><span style="color:#bbbbbb;">{</span></p>
+<p><strong>char</strong> <span style="color:#bbbbbb;">code,
+addCheese,choice;</span></p>
+<p><span style="color:#bbbbbb;">string name;</span></p>
+<p><strong>int</strong> <span style="color:#bbbbbb;">quantity;</span></p>
+<p><strong>float</strong> <span style="color:#bbbbbb;">totalPrice,price,meatballSales</span> <span style="color:#859900;">=</span> <span style="color:#d33682;">0</span><span style="color:#bbbbbb;">,
+chickenSliceSales</span> <span style="color:#859900;">=</span>
+<span style="color:#d33682;">0</span><span style="color:#bbbbbb;">,
+tunaSales</span> <span style="color:#859900;">=</span> <span style="color:#d33682;">0</span><span style="color:#bbbbbb;">,
+pepperoniSales</span> <span style="color:#859900;">=</span>
+<span style="color:#d33682;">0</span><span style="color:#bbbbbb;">;</span></p>
+<p><em>// do-while loop for continue the functioning till user
+wants</em></p>
+<p><span style="color:#859900;">do</span></p>
+<p><span style="color:#bbbbbb;">{</span></p>
+<p><em>// displaying the menu to user</em></p>
+<p><span style="color:#bbbbbb;">cout</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#2aa198;">"----------------------------MENU----------------------------</span><span style="color:#cb4b16;">\n\n</span><span style="color:#2aa198;">"</span><span style="color:#bbbbbb;">;</span></p>
+<p><span style="color:#bbbbbb;">cout</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#2aa198;">"Sandwiches</span><span style="color:#cb4b16;">\t</span><span style="color:#2aa198;">Code</span><span style="color:#cb4b16;">\t</span><span style="color:#2aa198;">Price(RM)</span><span style="color:#cb4b16;">\t</span><span style="color:#2aa198;">Additional
+cheese(RM)</span><span style="color:#cb4b16;">\n</span><span style="color:#2aa198;">"</span><span style="color:#bbbbbb;">;</span></p>
+<p><span style="color:#bbbbbb;">cout</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#2aa198;">"____________________________________________________________</span><span style="color:#cb4b16;">\n</span><span style="color:#2aa198;">"</span><span style="color:#bbbbbb;">;</span></p>
+<p><span style="color:#bbbbbb;">cout</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#2aa198;">"Meat
+ball</span><span style="color:#cb4b16;">\t</span><span style="color:#2aa198;">M</span><span style="color:#cb4b16;">\t</span><span style="color:#2aa198;">8.00</span><span style="color:#cb4b16;">\t\t</span><span style="color:#2aa198;">1.50
+each</span><span style="color:#cb4b16;">\n</span><span style="color:#2aa198;">"</span><span style="color:#bbbbbb;">;</span></p>
+<p><span style="color:#bbbbbb;">cout</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#2aa198;">"Chicken slice</span><span style="color:#cb4b16;">\t</span><span style="color:#2aa198;">C</span><span style="color:#cb4b16;">\t</span><span style="color:#2aa198;">7.50</span><span style="color:#cb4b16;">\t\t</span><span style="color:#2aa198;">1.50
+each</span><span style="color:#cb4b16;">\n</span><span style="color:#2aa198;">"</span><span style="color:#bbbbbb;">;</span></p>
+<p><span style="color:#bbbbbb;">cout</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#2aa198;">"Pepperoni</span><span style="color:#cb4b16;">\t</span><span style="color:#2aa198;">P</span><span style="color:#cb4b16;">\t</span><span style="color:#2aa198;">7.00</span><span style="color:#cb4b16;">\t\t</span><span style="color:#2aa198;">1.50
+each</span><span style="color:#cb4b16;">\n</span><span style="color:#2aa198;">"</span><span style="color:#bbbbbb;">;</span></p>
+<p><span style="color:#bbbbbb;">cout</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#2aa198;">"Tuna</span><span style="color:#cb4b16;">\t\t</span><span style="color:#2aa198;">T</span><span style="color:#cb4b16;">\t</span><span style="color:#2aa198;">6.50</span><span style="color:#cb4b16;">\t\t</span><span style="color:#2aa198;">1.50
+each</span><span style="color:#cb4b16;">\n\n</span><span style="color:#2aa198;">"</span><span style="color:#bbbbbb;">;</span></p>
+<p><em>// taking order from the user</em></p>
+<p><span style="color:#bbbbbb;">cout</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#2aa198;">"Enter
+the sandwich code: "</span><span style="color:#bbbbbb;">;</span></p>
+<p><span style="color:#bbbbbb;">cin</span><span style="color:#859900;">&gt;&gt;</span><span style="color:#bbbbbb;">code;</span></p>
+<p><span style="color:#bbbbbb;">cout</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#2aa198;">"Enter
+the quantity: "</span><span style="color:#bbbbbb;">;</span></p>
+<p><span style="color:#bbbbbb;">cin</span><span style="color:#859900;">&gt;&gt;</span><span style="color:#bbbbbb;">quantity;</span></p>
+<p><em>// calculating price and then adding tax by calling the
+functions defined above in the code</em></p>
+<p><span style="color:#bbbbbb;">price</span> <span style="color:#859900;">=</span> <span style="color:#268bd2;">calPrice</span><span style="color:#bbbbbb;">(</span><span style="color:#268bd2;">toupper</span><span style="color:#bbbbbb;">(code),
+quantity);</span></p>
+<p><span style="color:#859900;">if</span><span style="color:#bbbbbb;">(price</span> <span style="color:#859900;">==</span> <span style="color:#d33682;">0</span><span style="color:#bbbbbb;">)</span></p>
+<p><span style="color:#bbbbbb;">{</span></p>
+<p><span style="color:#bbbbbb;">cout</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#2aa198;">"Invalid sandwich code"</span><span style="color:#bbbbbb;">;</span></p>
+<p><span style="color:#bbbbbb;">}</span></p>
+<p><span style="color:#859900;">else</span></p>
+<p><span style="color:#bbbbbb;">{</span></p>
+<p><span style="color:#bbbbbb;">totalPrice</span> <span style="color:#859900;">=</span> <span style="color:#268bd2;">addItem</span><span style="color:#bbbbbb;">(price,
+quantity);</span></p>
+<p><span style="color:#859900;">if</span><span style="color:#bbbbbb;">( totalPrice</span> <span style="color:#859900;">&gt;</span> <span style="color:#bbbbbb;">price</span> <span style="color:#859900;">+</span>
+<span style="color:#bbbbbb;">price</span><span style="color:#859900;">*</span><span style="color:#d33682;">0.06</span><span style="color:#bbbbbb;">)</span></p>
+<p><span style="color:#bbbbbb;">{</span></p>
+<p><span style="color:#bbbbbb;">addCheese</span> <span style="color:#859900;">=</span> <span style="color:#2aa198;">'Y'</span><span style="color:#bbbbbb;">;</span></p>
+<p><span style="color:#bbbbbb;">}</span></p>
+<p><span style="color:#859900;">else</span></p>
+<p><span style="color:#bbbbbb;">{</span></p>
+<p><span style="color:#bbbbbb;">addCheese</span> <span style="color:#859900;">=</span> <span style="color:#2aa198;">'N'</span><span style="color:#bbbbbb;">;</span></p>
+<p><span style="color:#bbbbbb;">}</span></p>
+<p><span style="color:#859900;">switch</span> <span style="color:#bbbbbb;">(</span><span style="color:#268bd2;">toupper</span><span style="color:#bbbbbb;">(code))</span></p>
+<p><span style="color:#bbbbbb;">{</span></p>
+<p><span style="color:#859900;">case</span> <span style="color:#2aa198;">'M'</span><span style="color:#bbbbbb;">:</span></p>
+<p><span style="color:#bbbbbb;">{</span></p>
+<p><span style="color:#bbbbbb;">meatballSales</span> <span style="color:#859900;">+=</span> <span style="color:#bbbbbb;">totalPrice;</span></p>
+<p><span style="color:#bbbbbb;">name</span> <span style="color:#859900;">=</span> <span style="color:#2aa198;">"Meatball"</span><span style="color:#bbbbbb;">;</span></p>
+<p><span style="color:#859900;">break</span><span style="color:#bbbbbb;">;</span></p>
+<p><span style="color:#bbbbbb;">}</span></p>
+<p><span style="color:#859900;">case</span> <span style="color:#2aa198;">'C'</span><span style="color:#bbbbbb;">:</span></p>
+<p><span style="color:#bbbbbb;">{</span></p>
+<p><span style="color:#bbbbbb;">chickenSliceSales</span>
+<span style="color:#859900;">+=</span> <span style="color:#bbbbbb;">totalPrice;</span></p>
+<p><span style="color:#bbbbbb;">name</span> <span style="color:#859900;">=</span> <span style="color:#2aa198;">"Chicken
+slice"</span><span style="color:#bbbbbb;">;</span></p>
+<p><span style="color:#859900;">break</span><span style="color:#bbbbbb;">;</span></p>
+<p><span style="color:#bbbbbb;">}</span></p>
+<p><span style="color:#859900;">case</span> <span style="color:#2aa198;">'P'</span><span style="color:#bbbbbb;">:</span></p>
+<p><span style="color:#bbbbbb;">{</span></p>
+<p><span style="color:#bbbbbb;">pepperoniSales</span> <span style="color:#859900;">+=</span> <span style="color:#bbbbbb;">totalPrice;</span></p>
+<p><span style="color:#bbbbbb;">name</span> <span style="color:#859900;">=</span> <span style="color:#2aa198;">"Pepperoni"</span><span style="color:#bbbbbb;">;</span></p>
+<p><span style="color:#859900;">break</span><span style="color:#bbbbbb;">;</span></p>
+<p><span style="color:#bbbbbb;">}</span></p>
+<p><span style="color:#859900;">case</span> <span style="color:#2aa198;">'T'</span><span style="color:#bbbbbb;">:</span></p>
+<p><span style="color:#bbbbbb;">{</span></p>
+<p><span style="color:#bbbbbb;">tunaSales</span> <span style="color:#859900;">+=</span> <span style="color:#bbbbbb;">totalPrice;</span></p>
+<p><span style="color:#bbbbbb;">name</span> <span style="color:#859900;">=</span> <span style="color:#2aa198;">"Tuna"</span><span style="color:#bbbbbb;">;</span></p>
+<p><span style="color:#859900;">break</span><span style="color:#bbbbbb;">;</span></p>
+<p><span style="color:#bbbbbb;">}</span></p>
+<p><span style="color:#bbbbbb;">}</span></p>
+<p><span style="color:#bbbbbb;">cout</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#bbbbbb;">endl;</span></p>
+<p><em>// displaying the receipt by calling the customerReceipt
+function</em></p>
+<p><span style="color:#268bd2;">customerReceipt</span><span style="color:#bbbbbb;">(name, quantity, price, addCheese,
+totalPrice);</span></p>
+<p><span style="color:#bbbbbb;">}</span></p>
+<p><em>// asking the user to continue</em></p>
+<p><span style="color:#bbbbbb;">cout</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#2aa198;">"Do
+you want to continue [Y/N]: "</span><span style="color:#bbbbbb;">;</span></p>
+<p><span style="color:#bbbbbb;">cin</span><span style="color:#859900;">&gt;&gt;</span><span style="color:#bbbbbb;">choice;</span></p>
+<p><span style="color:#bbbbbb;">cout</span><span style="color:#859900;">&lt;&lt;</span><span style="color:#bbbbbb;">endl;</span></p>
+<p><span style="color:#bbbbbb;">}</span><span style="color:#859900;">while</span><span style="color:#bbbbbb;">(choice</span> <span style="color:#859900;">==</span> <span style="color:#2aa198;">'Y'</span>
+<span style="color:#859900;">||</span> <span style="color:#bbbbbb;">choice</span> <span style="color:#859900;">==</span> <span style="color:#2aa198;">'y'</span><span style="color:#bbbbbb;">);</span></p>
+<p><em>// at the end of the process displaying the complete
+sales</em></p>
+<p><span style="color:#268bd2;">salesReport</span><span style="color:#bbbbbb;">(meatballSales, chickenSliceSales, pepperoniSales,
+tunaSales);</span></p>
+<p><span style="color:#859900;">return</span> <span style="color:#d33682;">0</span><span style="color:#bbbbbb;">;</span></p>
+<p><span style="color:#bbbbbb;">}</span></p>
+<p><strong>OUTPUT:-</strong></p>
+<p><span style="color:#bbbbbb;"><img alt="JJ .-MENU- Sandwiches Code Price (RM) Additional cheese (RM) Meat ball Chicken slice Pepperoni M C P т 8.00 7.50 7.00 6.50 1." src="https://media.cheggcdn.com/coop/0f6/0f69952e-bdd5-4ba7-99fc-3246cf21f675/1609729095337_Screenshotfrom2021-01-0408-24-41.png" aria-describedby="ejt" style=""></span></p>
+<p><span style="color:#bbbbbb;"><img alt="Do you want additional cheese [Y/N]: Y BiteME Sandwich : Meatball Quantity : 2 Total Price : RM 16 Add Cheese : Y New Price +" src="https://media.cheggcdn.com/coop/219/2193a7bc-ab29-4017-8c66-fe2d84072f09/1609729113768_Screenshotfrom2021-01-0408-24-50.png" style="" aria-describedby="eju"></span></p>
+<p><span style="color:#bbbbbb;"><img alt="New Price + Gov tax : RM 23.85 Thank you and please come again. Do you want to continue [y/N]: y --MENU- Sandwiches Code Pric" src="https://media.cheggcdn.com/coop/3ed/3ed4fd52-37f9-4b78-8f0a-bf5cf6d6be2a/1609729153777_Screenshotfrom2021-01-0408-24-58.png" style="" aria-describedby="ejv"></span></p>
+<div id="ejt" class="hidden">JJ .-MENU- Sandwiches Code Price (RM) Additional cheese (RM) Meat ball Chicken slice Pepperoni M C P т 8.00 7.50 7.00 6.50 1.50 each 1.50 each 1.50 each 1.50 each Tuna Enter the sandwich code: I Enter the quantity: 2 Do you want additional cheese [Y/N]: Y BiteME Sandwich : Tuna Quantity : 2 Total Price : RM 13 Add Cheese : Y New Price + Gov tax : RM 16.96 Thank you and please come again. Do you want to continue [Y/N]: Y ------MENU-- Sandwiches Code Price (RM) Additional cheese (RM) Meat ball Chicken slice Pepperoni Tuna M C P т 8.00 7.50 7.00 6.50 1.50 each 1.50 each 1.50 each 1.50 each Enter the sandwich code: M Enter the quantity: 2 Do you want additional cheese [Y/N]: Y BiteME </div><div id="eju" class="hidden">Do you want additional cheese [Y/N]: Y BiteME Sandwich : Meatball Quantity : 2 Total Price : RM 16 Add Cheese : Y New Price + Gov tax : RM 20.14 Thank you and please come again. Do you want to continue [Y/N]: y ***** --MENU- Sandwiches Code Price (RM) Additional cheese (RM) 1.50 each 1.50 each 1.50 each 1.50 each Meat ball M 8.00 Chicken slice C 7.50 Pepperoni P 7.00 Tuna т 6.50 Enter the sandwich code: C Enter the quantity: 3 Do you want additional cheese [Y/N]: n BiteME : 3 Sandwich : Chicken slice Quantity Total Price : RM 22.5 Add Cheese : Y New Price + Gov tax : RM 23.85 Thank you and please come again. Do you want to continue [y/N]: y --MENU- </div><div id="ejv" class="hidden">New Price + Gov tax : RM 23.85 Thank you and please come again. Do you want to continue [y/N]: y --MENU- Sandwiches Code Price (RM) Additional cheese (RM) Meat ball Chicken slice Pepperoni Tuna ΣΟΟ.Ε 8.00 7.50 7.00 6.50 1.50 each 1.50 each 1.50 each 1.50 each Enter the sandwich code: p Enter the quantity: 5 Do you want additional cheese [Y/N]: y BiteME Sandwich : Pepperoni Quantity : 5 Total Price : RM 35 Add Cheese : Y New Price + Gov tax : RM 45.05 Thank you and please come again. Do you want to continue [y/N]: n BiteME SALES REPORT Meatball (RM) : 20.14 Chicken slice (RM) : 23.85 Pepperoni (RM) : 45.05 TUna (RM) : 16.96 Total Sales (RM) : 106 Thank you and please come again. ****** </div>
+                    
+                </div>
+                
+                <a href="#" class="show-comment-box no-comments" data-noajax="" data-count="0"><span class="comment-link-title">Comment </span> <span class="icon-chegg-chevron rotate-270"></span></a><div class="avatar-comments hide"><div class="comment-box"><div class="comments-header">Comments</div><ul class="comments-list"></ul><div class="leave-comment "><form>
+	<img class="chg-shadow avatar" src="https://c.cheggcdn.com/assets/site/avatars/02_img-avatar-gry-40x40.png" alt="Anonymous's Avatar" aria-label="more information" tabindex="0" aria-describedby="eggshell-3" style="">
+	<div class="comment-entry-wrap">
+        <label class="visible-to-screen-readers-only" for="qna-leave-a-comment">Leave a comment</label>
+		<textarea id="qna-leave-a-comment" placeholder="Leave a comment" class="chg-form comment-entry" rows="1" maxlength="500" style="height: 23px;"></textarea>
+	</div>
+	<div class="button-wrap">
+		<button class="btn-secondary-mini" type="button" href="#">Post comment</button>
+	</div>
+</form></div></div></div>
+            
