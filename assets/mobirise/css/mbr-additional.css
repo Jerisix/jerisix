@@ -1387,8 +1387,8 @@ a {
   }
 }
 .cid-szjEBmYqgM {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-top: 3rem;
+  padding-bottom: 4rem;
   background-color: #1a1e1e;
 }
 .cid-szjEBmYqgM .item {
@@ -1639,7 +1639,7 @@ a {
   color: #fafafa;
 }
 .cid-szjEBmYqgM H3 {
-  color: #ffe161;
+  color: #fafafa;
 }
 .cid-s48OLK6784 .navbar-dropdown {
   position: relative !important;
@@ -2839,6 +2839,33 @@ a {
   text-align: left;
   color: #bbbbbb;
 }
+.cid-szqvZOc6Cg {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  background-color: #ffffff;
+}
+.cid-szqvZOc6Cg .card .card-header {
+  background-color: transparent;
+  margin-bottom: 0;
+}
+.cid-szqvZOc6Cg .panel-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cid-szqvZOc6Cg .mbr-iconfont {
+  padding-left: 1rem;
+  font-family: 'Moririse2' !important;
+  font-size: 1.4rem !important;
+  color: #6592e6;
+}
+.cid-szqvZOc6Cg .panel-body,
+.cid-szqvZOc6Cg .card-header {
+  padding: 1rem 0;
+}
+.cid-szqvZOc6Cg .panel-title-edit {
+  color: #000000;
+}
 .cid-szkk6rEyJd .navbar-dropdown {
   position: relative !important;
 }
@@ -3175,7 +3202,7 @@ a {
   }
 }
 .cid-szkk6sai46 {
-  padding-top: 1rem;
+  padding-top: 2rem;
   padding-bottom: 6rem;
   background-color: #ffffff;
 }
